@@ -9,3 +9,7 @@ lib-cov
 logs
 node_modules
 temp
+packages/**/*.js
+packages/**/*.[cm]js
+packages/**/*.d.ts
+packages/**/*.d.[cm]ts

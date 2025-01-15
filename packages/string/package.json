@@ -19,7 +19,8 @@
       "types": "./index.d.ts",
       "import": "./index.mjs",
       "require": "./index.cjs"
-    }
+    },
+    "./*": "./*"
   },
   "main": "./index.mjs",
   "module": "./index.mjs",
