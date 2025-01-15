@@ -1,16 +1,19 @@
 import type { RollupOptions } from 'rollup'
 
-const configs: RollupOptions[] = [
-  {
-    input: 'index.ts',
-    output: {
-      file: 'bundle.js',
-      format: 'cjs',
-    },
-  },
-]
+const configs: RollupOptions[] = []
 
 export function createRollupConfig() {
-  console.log('hello world')
+  const functionNames = ['index']
+
+  for (const fn of functionNames) {
+    const input = fn === 'index'
+      ? `index.ts`
+      : `${fn}/index.ts`
+
+    configs.push({
+      input,
+    })
+  }
+
   return configs
 }

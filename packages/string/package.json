@@ -1,5 +1,5 @@
 {
-  "name": "@naiftools/core",
+  "name": "@naiftools/string",
   "type": "module",
   "version": "0.0.0",
   "description": "A naive JavaScript utility library",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Clover-You/naiftools.git",
-    "directory": "packages/core"
+    "directory": "packages/string"
   },
   "bugs": "https://github.com/Clover-You/naiftools/issues",
   "keywords": ["utils", "tool", "util"],

@@ -7,4 +7,7 @@ export default defineConfig({
       '@naiftools/core': resolve(__dirname, 'packages/core/index.ts'),
     },
   },
+  test: {
+    globals: true,
+  },
 })
