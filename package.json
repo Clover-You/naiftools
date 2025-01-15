@@ -1,7 +1,7 @@
 {
   "name": "@naiftools/monorepo",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.15.3",
   "description": "A naive JavaScript utility library",
@@ -41,7 +41,7 @@
   "scripts": {
     "build": "pnpm -r run build",
     "lint": "eslint .",
-    "release": "bumpp --execute=\"npm run release:prepare\" --all",
+    "release": "bumpp --execute=\"npm run build\" --all",
     "test": "pnpm test:unit",
     "test:unit": "vitest --project unit --workspace=vitest.workspace.ts",
     "typecheck": "tsc --noEmit",
