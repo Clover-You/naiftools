@@ -1,7 +1,7 @@
 {
   "name": "@naiftools/core",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A naive JavaScript utility library",
   "author": "Clover You <cloveryou02@gmail.com>",
   "license": "MIT",
