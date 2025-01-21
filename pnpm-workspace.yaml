@@ -5,3 +5,4 @@ catalog:
   rollup: ^4.30.1
   rollup-plugin-esbuild: ^6.1.1
   rollup-plugin-dts: ^6.1.1
+  tsx: ^4.19.2
