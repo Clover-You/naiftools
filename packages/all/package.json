@@ -1,0 +1,56 @@
+{
+  "name": "@naiftools/all",
+  "type": "module",
+  "version": "0.0.5",
+  "description": "A naive JavaScript utility library",
+  "author": "Clover You <cloveryou02@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Clover-You/naiftools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clover-You/naiftools.git",
+    "directory": "packages/all"
+  },
+  "bugs": "https://github.com/Clover-You/naiftools/issues",
+  "keywords": [
+    "utils",
+    "tool",
+    "util"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./*",
+        "./index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "*.cjs",
+    "*.d.cts",
+    "*.d.mts",
+    "*.d.ts",
+    "*.js",
+    "*.mjs"
+  ],
+  "scripts": {
+    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@naiftools/core": "workspace:*",
+    "@naiftools/string": "workspace:*"
+  }
+}
