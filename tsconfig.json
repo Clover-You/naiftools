@@ -6,6 +6,7 @@
     "moduleResolution": "Bundler",
     "paths": {
       "@naiftools/core": ["./packages/core/index.ts"],
+      "@naiftools/array": ["./packages/array/index.ts"],
       "@naiftools/string": ["./packages/string/index.ts"]
     },
     "resolveJsonModule": true,
