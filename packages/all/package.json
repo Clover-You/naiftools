@@ -50,6 +50,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
+    "@naiftools/array": "workspace:*",
     "@naiftools/core": "workspace:*",
     "@naiftools/string": "workspace:*"
   }
