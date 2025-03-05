@@ -1,4 +1,4 @@
-<p align="center">English | <a href="README.zh-CN.md">中文</a></p>
+<p align="center"><a href="README.md">English</a> | 中文</p>
 
 # NaifTools
 
@@ -6,11 +6,18 @@ A naive JavaScript utility library
 
 ## Installing
 
-`@naiftools/all` contains all utility packages. It bundles `@naiftools/core` as the default export.
+`@naiftools/all` 包含了所有工具包。它包将 `@naiftools/core` 作为 default 导出。
 
-Note: It is recommended to use on-demand imports for optimal bundle size. `@naiftools/all` is suitable for scenarios requiring all functionalities.
+注意：推荐使用按需引入方式以获得最佳打包体积，`@naiftools/all` 适合全量使用场景
 
 ```shell
+# npm
+npm install @naiftools/all
+
+# yarn
+yarn add @naiftools/all
+
+# pnpm
 pnpm add @naiftools/all
 ```
 
@@ -22,17 +29,39 @@ strings.isBlank('')
 arrays.isEmpty([])
 ```
 
-Alternatively, install specific packages based on your needs:
+或者你根据文档决定你所需要的包
 
 ```shell
+# npm
+npm install @naiftools/string
+
+# yarn
+yarn add @naiftools/string
+
+# pnpm
 pnpm add @naiftools/string
 ```
 
 ```shell
+# npm
+npm install @naiftools/array
+
+# yarn
+yarn add @naiftools/array
+
+# pnpm
 pnpm add @naiftools/array
+
 ```
 
 ```shell
+# npm
+npm install @naiftools/core
+
+# yarn
+yarn add @naiftools/core
+
+# pnpm
 pnpm add @naiftools/core
 ```
 
@@ -40,7 +69,7 @@ pnpm add @naiftools/core
 
 ### isArray
 
-Checks if the given value is an array.
+检查给定的值是否为数组。
 
 ```ts
 import naiftools from '@naiftools/core'
@@ -51,7 +80,7 @@ naiftools.isArray([]) // return true
 
 ### isObject
 
-Checks if the given value is an object.
+检查给定的值是否为对象。
 
 ```ts
 import naiftools from '@naiftools/core'
@@ -64,7 +93,7 @@ naiftools.isObject(null) // return false
 
 ### isString
 
-Checks if the given value is a string.
+检查给定的值是否为字符串。
 
 ```ts
 import naiftools from '@naiftools/core'
@@ -75,11 +104,9 @@ naiftools.isString('') // return true
 
 ### typeofs
 
-Returns the type of the given value as a string.
+返回给定值的类型作为字符串。此函数单独处理特殊值如`null`和数组。
 
-This function handles special cases like `null` and arrays separately.
-
-- Return Type: `'string' | 'number' | 'bigint' | 'boolean' | 'symbol' | 'undefined' | 'null' | 'object' | 'array' | 'function'`
+- 返回类型: `'string' | 'number' | 'bigint' | 'boolean' | 'symbol' | 'undefined' | 'null' | 'object' | 'array' | 'function'`
 
 ```ts
 import naiftools from '@naiftools/core'
@@ -94,7 +121,7 @@ naiftools.typeofs(1) // return 'number'
 
 ### isEmpty
 
-Checks if a list is empty or undefined/null.
+检查列表是否为空或未定义/为null。
 
 ```ts
 import arrays from '@naiftools/array'
@@ -106,7 +133,7 @@ arrays.isEmpty([1]) // return false
 
 ### isNotEmpty
 
-Checks a list is not empty or undefined/null
+检查列表不为空或未定义/为null
 
 ```ts
 import arrays from '@naiftools/array'
@@ -120,7 +147,7 @@ arrays.isNotEmpty([1]) // return true
 
 ### numberToLetter
 
-Converts a positive integer to its corresponding column title as used in spreadsheet programs (e.g., Excel).
+将正整数转换为电子表格程序（例如Excel）中使用的对应列标题。
 
 ```ts
 import strings from '@naiftools/string'
@@ -136,7 +163,9 @@ strings.numberToLetter(703) // return 'AAA'
 
 ### toKebabCase
 
-Converts a given string to kebab-case. E.g., 'helloWorld' becomes 'hello-world' and 'My String' becomes 'my-string'.
+将给定的字符串转换为kebab-case。
+
+例如，'helloWorld'变为'hello-world'，'My String'变为'my-string'。
 
 ```ts
 import strings from '@naiftools/string'
@@ -156,7 +185,9 @@ strings.toKebabCase(undefined as unknown as string) // return ''
 
 ### toCamelCase
 
-Converts a given string to camelCase. E.g., 'hello-world' becomes 'helloWorld' and 'My String' becomes 'myString'.
+将给定的字符串转换为驼峰式。
+
+例如，'hello-world' 变为 'helloWorld'，'My String' 变为 'myString'。
 
 ```ts
 import strings from '@naiftools/string'
@@ -178,7 +209,7 @@ strings.toCamelCase('trailing space   ') // return 'trailingSpace'
 
 ### getStringLineCount
 
-Counts the number of lines in a given string. A line is defined as a segment of text separated by \n or \r\n.
+计算给定字符串中的行数。行被定义为由 \n 或 \r\n 分隔的文本段。
 
 ```ts
 import strings from '@naiftools/string'
@@ -197,7 +228,7 @@ strings.getStringLineCount('line1\nline2\r\nline3\nline4\r\n') // return 5
 
 ### trim
 
-Trims the whitespace from both ends of a string. Returns null or undefined if the input is null or undefined.
+去除字符串两端的空白字符。如果输入为 null 或 undefined，则返回 null 或 undefined。
 
 ```ts
 strings.trim(' a ') // return 'a'
@@ -206,7 +237,7 @@ strings.trim(undefined) // return undefined
 
 ### trimLeft
 
-Trims the whitespace from the left side of a string. Returns null or undefined if the input is null or undefined.
+去除字符串左侧的空白字符。如果输入为 null 或 undefined，则返回 null 或 undefined。
 
 ```ts
 import strings from '@naiftools/string'
@@ -217,7 +248,7 @@ strings.trimLeft(undefined) // return undefined
 
 ### trimRight
 
-Trims the whitespace from the right side of a string. Returns null or undefined if the input is null or undefined.
+去除字符串右侧的空白字符。如果输入为 null 或 undefined，则返回 null 或 undefined。
 
 ```ts
 import strings from '@naiftools/string'
@@ -228,7 +259,7 @@ strings.trimRight(undefined) // return undefined
 
 ### isBlank/isNotBlank
 
-Checks if a string is blank (i.e., null, undefined, or empty or only contains whitespace).
+检查一个字符串是否为空（即，null、未定义、为空或只包含空白字符）。
 
 ```ts
 import strings from '@naiftools/string'
@@ -240,14 +271,14 @@ strings.isBlank(' ') // return true
 strings.isBlank('\t\n\f\r') // return true
 ```
 
-## Contribution
+## 贡献指南
 
-Contributions of any kind are welcome! If you have ideas or suggestions, feel free to open an issue or submit a pull request. Please ensure:
+欢迎通过 GitHub Issues 提交建议，或通过 Pull Request 贡献代码。请确保：
 
-1. Add comprehensive unit tests
-2. Update relevant documents
-3. Through ESLint check
+1. 添加完整的单元测试
+2. 更新相关文档
+3. 通过 ESLint 检查
 
-## License
+## 许可证
 
 MIT License © 2024 [Clover You](https://github.com/Clover-You)
