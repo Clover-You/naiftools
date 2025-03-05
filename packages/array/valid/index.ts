@@ -9,9 +9,7 @@
  * Otherwise returns `false`.
  */
 export function isEmpty(list: unknown[] | null | undefined) {
-  if (!list)
-    return true
-  return list.length === 0
+  return !list || list.length === 0
 }
 
 /**
